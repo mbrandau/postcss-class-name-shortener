@@ -25,12 +25,14 @@
     "postcss-selector-parser": "^5.0.0-rc.3"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "eslint": "^4.18.2",
     "eslint-config-postcss": "^2.0.2",
     "jest": "^22.4.2"
   },
   "scripts": {
-    "test": "jest && eslint *.js"
+    "test": "jest && eslint *.js",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",

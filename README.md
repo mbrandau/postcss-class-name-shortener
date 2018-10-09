@@ -46,10 +46,13 @@ postcss([ classNameShortener({
     }
 }) ])
 ```
+
+The `map` object will look like this:
 ```json
 {
   "long-class-name-that-just-sets-the-text-color-to-black": "a",
 }
 ```
 
+[css-shortener](https://github.com/mbrandau/css-shortener) lets you import the `map` object and replace the classes in HTML code.  
 See [PostCSS] docs for examples for your environment.

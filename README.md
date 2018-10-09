@@ -28,17 +28,31 @@ npm install --save postcss-class-name-shortener
 ```
 
 ```js
-postcss([ require('postcss-class-name-shortener', {
+const classNameShortener = require('postcss-class-name-shortener');
+const fs = require('fs');
+
+postcss([ classNameShortener({
     // Setting the callback option is mandatory
     callback: map => {
         console.log(JSON.stringify(map));
+        
+        // You can return a promise
+        return new Promise(((resolve, reject) => {
+            fs.writeFile('map.json', JSON.stringify(map), err => {
+                if(err) reject(err);
+                else resolve();
+            });
+        }))
     }
 }) ])
 ```
+
+The `map` object will look like this:
 ```json
 {
   "long-class-name-that-just-sets-the-text-color-to-black": "a",
 }
 ```
 
+[css-shortener](https://github.com/mbrandau/css-shortener) lets you import the `map` object and replace the classes in HTML code.  
 See [PostCSS] docs for examples for your environment.

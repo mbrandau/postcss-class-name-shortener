@@ -12,7 +12,7 @@ module.exports = postcss.plugin(
                 'A callback is required to return the mapped class names'
             );
 
-        const shortener = new CssShortener();
+        const shortener = opts.cssShortener || new CssShortener();
         const processor = parser(selectors => {
             selectors.walkClasses(classNode => {
                 classNode.value = shortener.getNewClassName(classNode.value);

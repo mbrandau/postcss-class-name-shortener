@@ -5,6 +5,7 @@ const postcss = require('postcss'),
 module.exports = postcss.plugin(
     'postcss-class-name-shortener',
     function (opts) {
+        opts = opts || {};
         // Check if callback is present in options object
         if (typeof opts.callback !== 'function')
             throw new Error(

@@ -12,6 +12,6 @@ function run(input, expectedOutput, expectedMap) {
         });
 }
 
-it('does something', () => {
+it('replaces class name', () => {
     return run('.test{ }', '.a{ }', { test: 'a' });
 });

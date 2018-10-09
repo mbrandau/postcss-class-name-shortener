@@ -1,0 +1,44 @@
+{
+  "name": "postcss-class-name-shortener",
+  "version": "1.0.0",
+  "description": "PostCSS plugin that shortens CSS class names to optimize website performance.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "css-shortener",
+    "shortener",
+    "class",
+    "name",
+    "shorten"
+  ],
+  "author": "Maximilian Brandau <info@maximilianbrandau.de>",
+  "license": "MIT",
+  "repository": "mbrandau/postcss-class-name-shortener",
+  "bugs": {
+    "url": "https://github.com/mbrandau/postcss-class-name-shortener/issues"
+  },
+  "homepage": "https://github.com/mbrandau/postcss-class-name-shortener",
+  "dependencies": {
+    "css-shortener": "^2.1.0",
+    "postcss": "^6.0.16",
+    "postcss-selector-parser": "^5.0.0-rc.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

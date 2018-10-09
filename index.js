@@ -2,8 +2,6 @@ const postcss = require('postcss'),
     CssShortener = require('css-shortener'),
     parser = require('postcss-selector-parser');
 
-const CLASS_NAME_REGEX = /\.([a-zA-Z_-][\w-_]*)/g;
-
 module.exports = postcss.plugin(
     'postcss-class-name-shortener',
     function (opts) {
@@ -20,7 +18,7 @@ module.exports = postcss.plugin(
             });
         });
 
-        return function (root, result) {
+        return function (root) {
             root.walkRules(ruleNode => {
                 return processor.process(ruleNode);
             });

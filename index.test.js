@@ -15,3 +15,8 @@ function run(input, expectedOutput, expectedMap) {
 it('replaces class name', () => {
     return run('.test{ }', '.a{ }', { test: 'a' });
 });
+it('throws error when callback is not present', () => {
+    expect(
+        () => postcss([plugin()]).process('.test{}')
+    ).toThrowError(/^A callback is required to return the mapped class names$/);
+});

@@ -7,7 +7,7 @@ module.exports = postcss.plugin(
     function (opts) {
         opts = opts || {};
         // Check if callback is present in options object
-        if (typeof opts.callback !== 'function')
+        if (typeof opts.callback !== 'function' && !opts.cssShortener)
             throw new Error(
                 'A callback is required to return the mapped class names'
             );
@@ -24,7 +24,8 @@ module.exports = postcss.plugin(
                 return processor.process(ruleNode);
             });
 
-            // Return mapped class names to callback
-            return opts.callback(shortener.getMap());
+            // Return mapped class names to callback if present
+            if (opts.callback) return opts.callback(shortener.getMap());
+            return undefined;
         };
     });

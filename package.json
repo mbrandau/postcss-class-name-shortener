@@ -25,10 +25,10 @@
     "postcss-selector-parser": "^5.0.0-rc.3"
   },
   "devDependencies": {
-    "coveralls": "^3.0.2",
+    "coveralls": "^3.0.6",
     "eslint": "^4.18.2",
     "eslint-config-postcss": "^2.0.2",
-    "jest": "^22.4.2"
+    "jest": "^24.8.0"
   },
   "scripts": {
     "test": "jest && eslint *.js",

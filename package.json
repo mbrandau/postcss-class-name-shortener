@@ -22,7 +22,7 @@
   "dependencies": {
     "css-shortener": "2.1.0",
     "postcss": "7.0.17",
-    "postcss-selector-parser": "5.0.0"
+    "postcss-selector-parser": "6.0.2"
   },
   "devDependencies": {
     "coveralls": "3.0.6",

@@ -25,7 +25,7 @@
     "postcss-selector-parser": "6.0.2"
   },
   "devDependencies": {
-    "coveralls": "3.0.6",
+    "coveralls": "3.0.7",
     "eslint": "4.19.1",
     "eslint-config-postcss": "2.0.2",
     "jest": "24.9.0"

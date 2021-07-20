@@ -4,6 +4,10 @@ node_js:
   - node
   - "8"
   - "6"
+  - "10"
+  - "12"
+  - "14"
+  - "16"
 install:
   - YARN_IGNORE_ENGINES=true yarn
 after_success: npm run coverage

@@ -1,6 +1,6 @@
 # PostCSS Class Name Shortener
 
-[![Build Status](https://img.shields.io/travis/com/mbrandau/postcss-class-name-shortener/master.svg)](https://travis-ci.com/mbrandau/postcss-class-name-shortener) [![Coverage Status](https://img.shields.io/coveralls/github/mbrandau/postcss-class-name-shortener.svg)](https://coveralls.io/github/mbrandau/postcss-class-name-shortener?branch=master) [![npm](https://img.shields.io/npm/v/postcss-class-name-shortener.svg)](https://www.npmjs.com/package/postcss-class-name-shortener) [![npm](https://img.shields.io/npm/dt/postcss-class-name-shortener.svg)](https://www.npmjs.com/package/postcss-class-name-shortener) [![GitHub issues](https://img.shields.io/github/issues/mbrandau/postcss-class-name-shortener.svg)](https://github.com/mbrandau/postcss-class-name-shortener/issues)
+[![CI](https://github.com/mbrandau/postcss-class-name-shortener/actions/workflows/main.yml/badge.svg)](https://github.com/mbrandau/postcss-class-name-shortener/actions/workflows/main.yml) [![npm](https://img.shields.io/npm/v/postcss-class-name-shortener.svg)](https://www.npmjs.com/package/postcss-class-name-shortener) [![npm](https://img.shields.io/npm/dt/postcss-class-name-shortener.svg)](https://www.npmjs.com/package/postcss-class-name-shortener) [![GitHub issues](https://img.shields.io/github/issues/mbrandau/postcss-class-name-shortener.svg)](https://github.com/mbrandau/postcss-class-name-shortener/issues)
 
 [PostCSS] plugin that shortens CSS class names to optimize website performance.
 
@@ -64,7 +64,5 @@ The `map` object will look like this:
 ```
 
 ## Options
-
-
 
 See [PostCSS] docs for examples for your environment.

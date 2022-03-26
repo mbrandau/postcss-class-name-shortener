@@ -1,6 +1,6 @@
 {
   "name": "postcss-class-name-shortener",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "PostCSS plugin that shortens CSS class names to optimize website performance.",
   "keywords": [
     "postcss",
@@ -19,28 +19,63 @@
     "url": "https://github.com/mbrandau/postcss-class-name-shortener/issues"
   },
   "homepage": "https://github.com/mbrandau/postcss-class-name-shortener",
-  "dependencies": {
-    "css-shortener": "2.1.1",
-    "postcss": "7.0.27",
-    "postcss-selector-parser": "6.0.6"
-  },
-  "devDependencies": {
-    "coveralls": "3.1.1",
-    "eslint": "4.19.1",
-    "eslint-config-postcss": "2.0.2",
-    "jest": "24.9.0"
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
-    "test": "jest && eslint *.js",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "semantic-release": "semantic-release"
   },
-  "eslintConfig": {
-    "extends": "eslint-config-postcss/es5",
-    "env": {
-      "jest": true
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
     }
   },
-  "jest": {
-    "testEnvironment": "node"
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/postcss-class-name-shortener.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/postcss-class-name-shortener.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/postcss-class-name-shortener.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "husky": "^7.0.4",
+    "semantic-release": "^19.0.2",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "css-shortener": "^3.0.0",
+    "postcss": "^8.4.12",
+    "postcss-selector-parser": "^6.0.9"
   }
 }

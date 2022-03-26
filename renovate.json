@@ -1,5 +1,4 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base", "config:js-lib", ":semanticCommits"],
+  "baseBranches": ["main", "next"]
 }
